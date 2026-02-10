@@ -39,6 +39,3 @@ npm run dev
 **Asmae ISSA**
 *Master's Student in Artificial Intelligence*
 
-
-
-```# SomaTV---AI-Movie-Recommender
