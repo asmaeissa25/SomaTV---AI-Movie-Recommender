@@ -40,6 +40,5 @@ npm run dev
 *Master's Student in Artificial Intelligence*
 
 
-**واش بغيتي نساعدك كيفاش تكتبي "Bio" زوينة فـ GitHub باش تكملي الصورة الاحترافية؟**
 
 ```# SomaTV---AI-Movie-Recommender
