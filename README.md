@@ -1,4 +1,4 @@
-# SomaTV - AI Movie Recommender 🎬🤖
+# SomaTV - AI Movie Recommender 🎬
 
 **SomaTV** is an innovative AI-powered web application that recommends movies based on the user's real-time emotions. By leveraging Deep Learning and Computer Vision, the app analyzes facial expressions to suggest the perfect film for your current mood.
 
@@ -24,7 +24,6 @@ The backend is optimized for performance, handling requests in approximately **4
    python -m uvicorn main:app --reload
 
 ```
-
 2. **Frontend:**
 ```bash
 cd frontend
@@ -32,12 +31,4 @@ npm run dev
 
 ```
 
-
-
-## 👩‍💻 Author
-
-**Asmae ISSA**
-*Master's Student in Artificial Intelligence*
-
-```
 
