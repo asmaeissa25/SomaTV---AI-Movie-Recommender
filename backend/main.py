@@ -4,15 +4,27 @@ from pydantic import BaseModel
 import cv2
 import numpy as np
 import base64
+import os
 from tensorflow.keras.models import load_model
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # 1. First, define the app
-app = FastAPI()
+app = FastAPI(
+    title="SomaTV AI API",
+    description="Emotion detection and movie recommendation API",
+    version="1.0.0"
+)
 
-# 2. CORS settings are necessary for React to communicate with Python
+# 2. CORS settings - restrict to allowed origins for security
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )

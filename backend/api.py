@@ -5,13 +5,25 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import io
 from PIL import Image
+import os
+from dotenv import load_dotenv
 
-app = FastAPI()
+# Load environment variables
+load_dotenv()
 
-# Very important for React to communicate with FastAPI
+app = FastAPI(
+    title="SomaTV AI API",
+    description="Emotion detection and movie recommendation API",
+    version="1.0.0"
+)
+
+# Secure CORS configuration
+allowed_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:3000").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )

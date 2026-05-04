@@ -42,26 +42,103 @@
 
 ![Real-time Analysis](./demo/soma6.png)
 
-## 🛠️ How to Run
+## 🛠️ Prerequisites
 
-### Backend Setup:
+Before you begin, ensure you have the following installed:
+
+- **Python 3.8+**
+- **Node.js 16+** and npm/yarn
+- **Git**
+- **Webcam** (for emotion detection feature)
+
+## 📋 Installation & Setup
+
+### 1. Clone the Repository
 
 ```bash
+git clone https://github.com/asmaeissa25/SomaTV---AI-Movie-Recommender.git
+cd SOMATV
+```
+
+### 2. Backend Setup
+
+```bash
+# Navigate to backend directory
 cd backend
-python -m uvicorn main:app --reload
+
+# Create a virtual environment (recommended)
+python -m venv venv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# Install dependencies
+pip install fastapi uvicorn tensorflow keras opencv-python pillow python-dotenv
+
+# Create .env file (copy from .env.example)
+cp .env.example .env
+
+# Configure CORS origins in .env if needed (default: localhost:5173,3000)
+```
+
+### 3. Start the Backend Server
+
+```bash
+# From the backend directory
+python -m uvicorn main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 The backend will run on `http://127.0.0.1:8000`
 
-### Frontend Setup:
+**API Documentation:** Visit `http://127.0.0.1:8000/docs` for interactive API docs
+
+### 4. Frontend Setup
 
 ```bash
+# In a new terminal, navigate to frontend directory
 cd frontend
+
+# Install dependencies
 npm install
+
+# Create .env file if needed (configure TMDB API key)
+# VITE_TMDB_API_KEY=your_api_key_here
+
+# Start development server
 npm run dev
 ```
 
 The frontend will run on `http://localhost:5173`
+
+### 5. Access the Application
+
+Open your browser and navigate to: `http://localhost:5173`
+
+## 🔐 Environment Variables
+
+### Backend (.env)
+
+```env
+# Allowed CORS origins (comma-separated)
+ALLOWED_ORIGINS=http://localhost:5173,http://localhost:3000
+
+# Model configuration
+MODEL_PATH=emotion_model.h5
+
+# Server configuration
+API_HOST=0.0.0.0
+API_PORT=8000
+```
+
+### Frontend (.env.local or .env)
+
+```env
+VITE_TMDB_API_KEY=your_tmdb_api_key_here
+VITE_API_URL=http://localhost:8000
+```
 
 ## 📋 Project Structure
 
@@ -126,15 +203,118 @@ To use the movie recommendations feature, you need to add your TMDB API key:
 
 The backend is optimized for performance, handling emotion detection requests in approximately **40ms**, ensuring a smooth and "live" recommendation feel.
 
+## 🔌 API Endpoints
+
+### Emotion Prediction
+
+**POST** `/predict`
+
+Request:
+
+```json
+{
+  "image": "base64_encoded_image_string"
+}
+```
+
+Response:
+
+```json
+{
+  "mood": "Happy"
+}
+```
+
+### Health Check
+
+**GET** `/docs` - Interactive API documentation (Swagger UI)
+
+**GET** `/redoc` - Alternative API documentation (ReDoc)
+
+## 🐛 Troubleshooting
+
+### Backend Issues
+
+**Problem:** `ModuleNotFoundError: No module named 'tensorflow'`
+
+- **Solution:** Ensure you're in the virtual environment and have installed all dependencies:
+  ```bash
+  pip install -r requirements.txt
+  ```
+
+**Problem:** `emotion_model.h5 not found`
+
+- **Solution:** Ensure the model file is in the backend directory or update the `MODEL_PATH` in `.env`
+
+**Problem:** CORS errors in browser console
+
+- **Solution:** Update `ALLOWED_ORIGINS` in `.env` to include your frontend URL
+
+### Frontend Issues
+
+**Problem:** `TMDB API key errors`
+
+- **Solution:** Verify your TMDB API key is correctly set in the environment variables
+
+**Problem:** Webcam not working
+
+- **Solution:**
+  - Check browser permissions for camera access
+  - Try a different browser
+  - Ensure your camera is not already in use by another app
+
+## 📦 Build & Deployment
+
+### Frontend Build
+
+```bash
+cd frontend
+npm run build
+```
+
+Output will be in `frontend/dist/`
+
+### Backend Deployment
+
+For production deployment, use a production ASGI server:
+
+```bash
+# Using gunicorn with uvicorn workers
+pip install gunicorn
+gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app --bind 0.0.0.0:8000
+```
+
+## 📈 Future Improvements
+
+- [ ] Add backend caching for frequently detected emotions
+- [ ] Implement user preferences and watchlist
+- [ ] Add more emotion categories
+- [ ] Optimize model for faster inference
+- [ ] Add Docker containerization
+- [ ] Deploy to cloud (AWS, GCP, Azure)
+- [ ] Add analytics and telemetry
+
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to fork this repository and submit pull requests.
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📝 License
 
-This project is open source and available under the MIT License.
+This project is open source and available under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 🙋 Support
+
+For issues, questions, or suggestions, please open an issue on [GitHub Issues](https://github.com/asmaeissa25/SomaTV---AI-Movie-Recommender/issues).
 
 ## 👨‍💻 Author
+
+**Asmae Issa** - [GitHub](https://github.com/asmaeissa25)
 
 **SomaTV Development Team** - 2026
 
