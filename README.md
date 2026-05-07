@@ -16,33 +16,7 @@
 - **AI/ML:** TensorFlow/Keras, OpenCV
 - **Data:** TMDB API for movie metadata
 
-## 📸 Demo & Screenshots
-
-### Application Interface
-
-<img src="https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma1.png" alt="SomaTV Interface" width="100%" />
-
-### Emotion Detection in Action
-
-<img src="https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma2.png" alt="Emotion Detection" width="100%" />
-
-### AI-Powered Recommendations
-
-<img src="https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma3.png" alt="Movie Recommendations" width="100%" />
-
-### Feature Showcase
-
-<img src="https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma4.png" alt="Feature Showcase" width="100%" />
-
-### User Experience
-
-<img src="https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma5.png" alt="User Experience" width="100%" />
-
-### Real-time Analysis
-
-<img src="https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma6.png" alt="Real-time Analysis" width="100%" />
-
-## 🛠️ Prerequisites
+## ️ Prerequisites
 
 Before you begin, ensure you have the following installed:
 
