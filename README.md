@@ -20,27 +20,27 @@
 
 ### Application Interface
 
-![SomaTV Interface](./demo/soma1.png)
+![SomaTV Interface](demo/soma1.png)
 
 ### Emotion Detection in Action
 
-![Emotion Detection](./demo/soma2.png)
+![Emotion Detection](demo/soma2.png)
 
 ### AI-Powered Recommendations
 
-![Movie Recommendations](./demo/soma3.png)
+![Movie Recommendations](demo/soma3.png)
 
 ### Feature Showcase
 
-![Feature Showcase](./demo/soma4.png)
+![Feature Showcase](demo/soma4.png)
 
 ### User Experience
 
-![User Experience](./demo/soma5.png)
+![User Experience](demo/soma5.png)
 
 ### Real-time Analysis
 
-![Real-time Analysis](./demo/soma6.png)
+![Real-time Analysis](demo/soma6.png)
 
 ## 🛠️ Prerequisites
 
