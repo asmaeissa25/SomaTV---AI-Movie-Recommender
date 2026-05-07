@@ -20,27 +20,27 @@
 
 ### Application Interface
 
-![SomaTV Interface](https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma1.png)
+![SomaTV Interface](./demo/soma1.png)
 
 ### Emotion Detection in Action
 
-![Emotion Detection](https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma2.png)
+![Emotion Detection](./demo/soma2.png)
 
 ### AI-Powered Recommendations
 
-![Movie Recommendations](https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma3.png)
+![Movie Recommendations](./demo/soma3.png)
 
 ### Feature Showcase
 
-![Feature Showcase](https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma4.png)
+![Feature Showcase](./demo/soma4.png)
 
 ### User Experience
 
-![User Experience](https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma5.png)
+![User Experience](./demo/soma5.png)
 
 ### Real-time Analysis
 
-![Real-time Analysis](https://raw.githubusercontent.com/asmaeissa25/SomaTV---AI-Movie-Recommender/main/demo/soma6.png)
+![Real-time Analysis](./demo/soma6.png)
 
 ## 🛠️ Prerequisites
 
